@@ -1,7 +1,9 @@
-while true do 
+_G.Condition = true 
+while _G.Condition == true do
+wait(0)
 
-    wait(0)
-    
+
+ 
     local args = {
         [1] = workspace.NPCs.Special:FindFirstChild("Oonel(Boss)"),
         [2] = 1,
@@ -129,5 +131,6 @@ while true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.DmgEvent:FireServer(unpack(args))
+
 
 end
